@@ -1,0 +1,13 @@
+{
+  "Application": {
+    "Name": "mywebapp",
+    "Host": "0.0.0.0",
+    "Port": 8000
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=postgres;Port=5432;Database=mywebappdb;Username=postgres;Password=postgres"
+  },
+  "Database": {
+    "AutoMigrate": true
+  }
+}
