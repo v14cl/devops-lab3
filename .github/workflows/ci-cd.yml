@@ -14,7 +14,7 @@ env:
   DOTNET_VERSION: '10.0.x'
   SOLUTION_FILE: devops-lab3.sln
   TEST_PROJECT: tests/mywebapp.Tests/mywebapp.Tests.csproj
-  DOCKER_CONTEXT: lab1
+  DOCKER_CONTEXT: ./lab1
   DOCKERFILE: lab1/src/mywebapp/Dockerfile
   IMAGE_NAME: ghcr.io/${{ github.repository }}
 
