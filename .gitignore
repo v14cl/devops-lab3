@@ -1,0 +1,14 @@
+/.idea/
+/.vagrant/
+
+**/bin/
+**/obj/
+**/TestResults/
+coverage/
+coverage-report/
+
+*.user
+*.suo
+*.log
+.env
+*.nupkg

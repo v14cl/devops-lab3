@@ -1,0 +1,2 @@
+ignored:
+  - DL3018 # Alpine packages are intentionally not pinned in this lab image.
