@@ -1,0 +1,13 @@
+{
+  "Application": {
+    "Name": "${DEPLOY_APP_NAME}",
+    "Host": "${DEPLOY_APP_BIND}",
+    "Port": ${DEPLOY_APP_PORT}
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=${DEPLOY_DB_HOST};Port=${DEPLOY_DB_PORT};Database=${DEPLOY_DB_NAME};Username=${DEPLOY_DB_USER};Password=${DB_PASSWORD}"
+  },
+  "Database": {
+    "AutoMigrate": false
+  }
+}

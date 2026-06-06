@@ -1,0 +1,13 @@
+{
+  "Application": {
+    "Name": "mywebapp",
+    "Host": "127.0.0.1",
+    "Port": 8000
+  },
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=127.0.0.1;Port=5432;Database=mywebappdb;Username=mywebapp;Password=change_me"
+  },
+  "Database": {
+    "AutoMigrate": false
+  }
+}

@@ -1,0 +1,18 @@
+export DEPLOY_APP_NAME=mywebapp
+export DEPLOY_UNIT=mywebapp-container
+export DEPLOY_APP_USER=mywebapp
+export DEPLOY_CONFIG_DIR=/etc/mywebapp
+export DEPLOY_CONFIG_FILE=/etc/mywebapp/config.json
+export DEPLOY_ENV_FILE=/etc/mywebapp/deployment.env
+export DEPLOY_CONTAINER_NAME=mywebapp-app
+export DEPLOY_IMAGE=ghcr.io/v14cl/devops-lab3:stable
+export DEPLOY_APP_PORT=8000
+export DEPLOY_APP_BIND=127.0.0.1
+
+export DEPLOY_DB_HOST=127.0.0.1
+export DEPLOY_DB_PORT=5432
+export DEPLOY_DB_NAME=mywebappdb
+export DEPLOY_DB_USER=mywebapp
+
+export DEPLOY_NGINX_ACCESS_LOG=/var/log/nginx/mywebapp.access.log
+export DEPLOY_NGINX_ERROR_LOG=/var/log/nginx/mywebapp.error.log

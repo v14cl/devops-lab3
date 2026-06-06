@@ -1,0 +1,20 @@
+[Unit]
+Description=${DEPLOY_APP_NAME} container
+After=network-online.target docker.service postgresql.service
+Wants=network-online.target
+Requires=docker.service postgresql.service
+
+[Service]
+Type=simple
+User=${DEPLOY_APP_USER}
+Group=${DEPLOY_APP_USER}
+EnvironmentFile=${DEPLOY_ENV_FILE}
+ExecStartPre=-/usr/bin/docker rm -f ${DEPLOY_CONTAINER_NAME}
+ExecStart=/usr/bin/docker run --rm --name ${DEPLOY_CONTAINER_NAME} --network host -v ${DEPLOY_CONFIG_FILE}:${DEPLOY_CONFIG_FILE}:ro -e DOTNET_ENVIRONMENT=Production ${MYWEBAPP_IMAGE}
+ExecStop=/usr/bin/docker stop ${DEPLOY_CONTAINER_NAME}
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=120
+
+[Install]
+WantedBy=multi-user.target
