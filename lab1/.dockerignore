@@ -1,0 +1,11 @@
+.git
+.github
+**/bin/
+**/obj/
+**/TestResults/
+*.user
+*.suo
+*.log
+README.md
+docs/
+docker-compose.yml
