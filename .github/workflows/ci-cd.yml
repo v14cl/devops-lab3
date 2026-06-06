@@ -14,7 +14,7 @@ env:
   DOTNET_VERSION: '10.0.x'
   SOLUTION_FILE: devops-lab3.sln
   TEST_PROJECT: tests/mywebapp.Tests/mywebapp.Tests.csproj
-  DOCKER_CONTEXT: ./lab1
+  BUILD_CONTEXT: ./lab1
   DOCKERFILE: lab1/src/mywebapp/Dockerfile
   IMAGE_NAME: ghcr.io/${{ github.repository }}
 
@@ -155,7 +155,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v6
         with:
-          context: ${{ env.DOCKER_CONTEXT }}
+          context: ${{ env.BUILD_CONTEXT }}
           file: ${{ env.DOCKERFILE }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
