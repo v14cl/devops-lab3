@@ -71,3 +71,5 @@ curl http://localhost/health/ready
 docker network ls
 docker volume ls
 ```
+
+CI/CD demo: successful pull request.
