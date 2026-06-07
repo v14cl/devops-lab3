@@ -59,6 +59,12 @@ public sealed class SystemEndpointsTests : IDisposable
         Assert.Contains("/notes", body, StringComparison.OrdinalIgnoreCase);
     }
 
+    [Fact]
+    public void Demo_Failing_Test()
+    {
+        Assert.True(false);
+    }
+
     public void Dispose()
     {
         _client.Dispose();
